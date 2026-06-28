@@ -24,7 +24,7 @@ class TransactionDetailController extends Controller
             
             $total = $this->recalculateTotal( $transaction ); 
             
-            $detail->load( 'product:id,name, quantity,price' ); 
+            $detail->load( 'product:id,name,price' ); 
             
             return [ 'detail' => $detail, 'total_amount' => $total, ]; 
             } ); 
