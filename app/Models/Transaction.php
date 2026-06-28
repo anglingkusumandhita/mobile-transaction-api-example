@@ -13,7 +13,13 @@ class Transaction extends Model
     
     protected $fillable = [ 'user_id', 'transaction_code', 'transaction_date', 'total_amount', ]; 
     
-    protected function casts(): array { return [ 'transaction_date' => 'datetime', 'total_amount' => 'integer', ]; } 
+    protected function casts(): array { 
+        return [
+            'user_id' => 'integer',
+            'transaction_date' => 'datetime',
+            'total_amount' => 'integer',
+        ];    
+    } 
     
     public function user(): BelongsTo 
     { 
